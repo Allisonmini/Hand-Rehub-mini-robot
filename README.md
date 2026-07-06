@@ -1,4 +1,4 @@
-#Hand-Rehab Mini Robot — Rock, Paper, Scissors
+# Hand-Rehab Mini Robot — Rock, Paper, Scissors
 
 A Rock-Paper-Scissors game you play against a **micro:bit robot** using only your
 hand in front of a webcam — designed to make **hand-injury physical therapy** fun.
@@ -140,8 +140,6 @@ Python · OpenCV · MediaPipe · MicroPython · Flask · Chart.js · Anthropic C
 
 ## 📄 Notes
 
-- `.env` (your API key) and `data/` (your play history) are **not** committed — they're
-  in `.gitignore`. Never share your API key publicly.
 - This project is a motivational rehab aid, **not** a medical device, and the AI coach
   does not give medical diagnoses.
 
