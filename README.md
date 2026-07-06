@@ -11,8 +11,9 @@ progress report so you can watch your recovery improve over time.
 
 ## 🎥 Demo & Presentation
 
-- **Product demo video:** _(add your video link here)_
-- **Presentation slides:** _(add your slides link here)_
+- **Product demo video:** 
+- **Presentation slides:**[Presentation for Capstone project (PRIME)-2.pdf](https://github.com/user-attachments/files/29715768/Presentation.for.Capstone.project.PRIME.-2.pdf)
+
 
 <!-- Tip: drag a video file into a GitHub issue/README edit box to get a hosted link,
      or paste a YouTube / Google Drive / Canva link above. -->
@@ -143,3 +144,7 @@ Python · OpenCV · MediaPipe · MicroPython · Flask · Chart.js · Anthropic C
   in `.gitignore`. Never share your API key publicly.
 - This project is a motivational rehab aid, **not** a medical device, and the AI coach
   does not give medical diagnoses.
+
+
+
+
