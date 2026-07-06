@@ -1,0 +1,33 @@
+#!/bin/bash
+# ---------------------------------------------------------------
+# Launcher inside RPS Dashboard.app.
+# Starts the local dashboard server and opens it in the browser.
+# The last launch is logged to dashboard-launch.log in the project
+# folder so problems can be diagnosed if the app ever won't start.
+# ---------------------------------------------------------------
+PROJECT="/Users/nyeinnyeinaye/rps-rehab"
+if [ ! -d "$PROJECT" ]; then
+    HERE="$(cd "$(dirname "$0")/../../.." && pwd)"
+    [ -f "$HERE/dashboard.py" ] && PROJECT="$HERE"
+fi
+cd "$PROJECT" || exit 1
+
+# Record this launch (overwritten each time) for troubleshooting.
+exec > "dashboard-launch.log" 2>&1
+echo "=== RPS Dashboard launch: $(date) ==="
+echo "user=$USER home=$HOME dir=$(pwd)"
+
+# Prefer the project's virtual environment; fall back to system python3.
+if [ -x ".venv/bin/python3" ]; then
+    PY=".venv/bin/python3"
+else
+    PY="python3"
+fi
+echo "python=$PY"
+"$PY" --version
+
+# Force the native arm64 slice. Finder/LaunchServices can otherwise start
+# Python under x86_64 (Rosetta), which can't load the arm64 native libraries
+# installed in the venv (pydantic_core, mediapipe, opencv, ...).
+echo "starting dashboard.py (forcing arm64) ..."
+exec arch -arm64 "$PY" dashboard.py

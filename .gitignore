@@ -1,0 +1,16 @@
+# Secrets - never commit your real key
+.env
+
+# Recorded play history (local data)
+data/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# macOS
+.DS_Store
+dashboard-launch.log
+game-launch.log

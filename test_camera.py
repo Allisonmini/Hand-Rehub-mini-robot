@@ -1,0 +1,14 @@
+import cv2
+
+cap = cv2.VideoCapture(0)
+
+while True:
+    ret, frame = cap.read()
+    frame = cv2.flip(frame, 1)  # mirror like a selfie
+    cv2.imshow("Camera Test", frame)
+    
+    if cv2.waitKey(1) & 0xFF == ord('q'):
+        break
+
+cap.release()
+cv2.destroyAllWindows()

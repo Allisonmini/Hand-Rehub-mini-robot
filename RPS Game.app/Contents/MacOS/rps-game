@@ -1,0 +1,19 @@
+#!/bin/bash
+# ---------------------------------------------------------------
+# Launcher inside RPS Game.app.
+#
+# The webcam game needs camera permission. macOS grants that to Terminal
+# (a real app) but NOT reliably to a script-based .app, so double-clicking
+# the app used to fail with "camera not authorized" and no prompt.
+#
+# So this app opens the game *in Terminal*, where the camera prompt works.
+# You still just double-click the icon; a small Terminal window appears
+# while you play, and macOS will ask to allow the camera the first time.
+# ---------------------------------------------------------------
+CMD="/Users/nyeinnyeinaye/rps-rehab/Start Game.command"
+if [ ! -f "$CMD" ]; then
+    HERE="$(cd "$(dirname "$0")/../../.." && pwd)"
+    [ -f "$HERE/Start Game.command" ] && CMD="$HERE/Start Game.command"
+fi
+
+open -a Terminal "$CMD"
