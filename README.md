@@ -11,7 +11,7 @@ progress report so you can watch your recovery improve over time.
 
 ## 🎥 Demo & Presentation
 
-- **Product demo video:** https://youtube.com/shorts/anoP_wj1KC4?feature=share
+- **Product demo video:** [https://youtube.com/shorts/anoP_wj1KC4?feature=share](https://youtu.be/9y4PdE28EYA?si=soqSc5Qun0e9QQVc)
 - **Presentation slides:**[Presentation for Capstone project (PRIME)-2.pdf](https://github.com/user-attachments/files/29715768/Presentation.for.Capstone.project.PRIME.-2.pdf)
 
 
